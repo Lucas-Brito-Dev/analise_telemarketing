@@ -32,6 +32,12 @@ st.markdown("""
         text-align: center;
         margin-bottom: 0.5em;
     }
+    .subtitle {
+        color: #696969;
+        font-size: 1.4em;
+        font-weight: normal;
+        text-align: center;  /* Centraliza o subtítulo */
+    }
     .section-title {
         color: #4682B4;
         font-size: 1.8em;
@@ -84,7 +90,7 @@ if 'features_df' not in st.session_state:
 
 # Banner inicial
 st.markdown('<div class="main-title">📞 Análise de Dados do SAC/Telemarketing</div>', unsafe_allow_html=True)
-st.markdown("**Dashboard interativo para otimização de processos e aumento de lucratividade**", unsafe_allow_html=True)
+st.markdown('<div class="subtitle">Dashboard interativo para otimização de processos e aumento de lucratividade</div>', unsafe_allow_html=True)
 
 # Sidebar personalizada
 with st.sidebar:
