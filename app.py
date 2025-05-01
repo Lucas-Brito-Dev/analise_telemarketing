@@ -6,13 +6,13 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from sklearn.cluster import KMeans
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import silhouette_score
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
-import statsmodels
+import statsmodels.api as sm
 import datetime
 import io
+import logging
 
 # Configuração da página com tema visual
 st.set_page_config(
@@ -106,11 +106,11 @@ with st.sidebar:
     - Plotly
     - Streamlit
     - Scikit-learn
+    - statsmodels   
     """)
 st.divider()
 
 # Função para carregar os dados
-@st.cache_data
 def carregar_dados():
     with st.spinner("Carregando dados... ⏳"):
         try:
